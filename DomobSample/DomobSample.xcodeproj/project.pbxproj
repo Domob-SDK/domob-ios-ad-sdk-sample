@@ -42,6 +42,10 @@
 		1DF6E0A81624130E0069BE3B /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DF6E0A71624130E0069BE3B /* Icon.png */; };
 		1DF6E0AA162413140069BE3B /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DF6E0A9162413140069BE3B /* Icon@2x.png */; };
 		E515CFCC177D8EF700CF4F99 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E515CFCB177D8EF700CF4F99 /* AudioToolbox.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		E52BE785180E365000A3131B /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = E52BE784180E365000A3131B /* EGORefreshTableHeaderView.m */; };
+		E52BE789180E369D00A3131B /* DMFeedsAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E52BE787180E369D00A3131B /* DMFeedsAdViewController.m */; };
+		E52BE795180E55D200A3131B /* DomobAdSDKBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E52BE793180E55D200A3131B /* DomobAdSDKBundle.bundle */; };
+		E52BE796180E55D200A3131B /* libDomobAdSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E52BE794180E55D200A3131B /* libDomobAdSDK.a */; };
 		E567E01317F5857B00446E72 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E567E01217F5857B00446E72 /* CoreText.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		E567E01517F5858700446E72 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E567E01417F5858700446E72 /* QuartzCore.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		E567E01717F5859000446E72 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E567E01617F5859000446E72 /* MediaPlayer.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -49,11 +53,10 @@
 		E567E01B17F585A700446E72 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E567E01A17F585A700446E72 /* libz.dylib */; settings = {ATTRIBUTES = (Weak, ); }; };
 		E567E01D17F585B100446E72 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E567E01C17F585B100446E72 /* MobileCoreServices.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		E567E01F17F585BB00446E72 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E567E01E17F585BB00446E72 /* CFNetwork.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		E567E02317F586D900446E72 /* DMFeedsAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E567E02117F586D900446E72 /* DMFeedsAdViewController.m */; };
-		E567E02417F586D900446E72 /* DMFeedsAdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E567E02217F586D900446E72 /* DMFeedsAdViewController.xib */; };
 		E5DF482B179682640095388E /* DMFlexibleSampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5DF482A179682640095388E /* DMFlexibleSampleViewController.m */; };
 		E5DF482D1796828F0095388E /* DMFlexibleSampleViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5DF482C1796828F0095388E /* DMFlexibleSampleViewController_iPhone.xib */; };
-		E5DF482F179682A60095388E /* DMFlexibleSampleViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5DF482E179682A60095388E /* DMFlexibleSampleViewController_iPad.xib */; };
+		E5F80E7F18152E1F00168C05 /* DMFeedsAdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5F80E7E18152E1F00168C05 /* DMFeedsAdViewController.xib */; };
+		E5F80E8118152F6900168C05 /* DMFlexibleSampleViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5F80E8018152F6900168C05 /* DMFlexibleSampleViewController_iPad.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,6 +101,18 @@
 		1DF6E0A71624130E0069BE3B /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../Icon.png; sourceTree = "<group>"; };
 		1DF6E0A9162413140069BE3B /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "../Icon@2x.png"; sourceTree = "<group>"; };
 		E515CFCB177D8EF700CF4F99 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		E52BE783180E365000A3131B /* EGORefreshTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGORefreshTableHeaderView.h; sourceTree = "<group>"; };
+		E52BE784180E365000A3131B /* EGORefreshTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGORefreshTableHeaderView.m; sourceTree = "<group>"; };
+		E52BE786180E369D00A3131B /* DMFeedsAdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMFeedsAdViewController.h; sourceTree = "<group>"; };
+		E52BE787180E369D00A3131B /* DMFeedsAdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMFeedsAdViewController.m; sourceTree = "<group>"; };
+		E52BE78C180E55D200A3131B /* DMAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMAdView.h; sourceTree = "<group>"; };
+		E52BE78D180E55D200A3131B /* DMFeedsAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMFeedsAdView.h; sourceTree = "<group>"; };
+		E52BE78E180E55D200A3131B /* DMInterstitialAdController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMInterstitialAdController.h; sourceTree = "<group>"; };
+		E52BE78F180E55D200A3131B /* DMRTSplashAdController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMRTSplashAdController.h; sourceTree = "<group>"; };
+		E52BE790180E55D200A3131B /* DMSplashAdController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMSplashAdController.h; sourceTree = "<group>"; };
+		E52BE791180E55D200A3131B /* DMTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMTools.h; sourceTree = "<group>"; };
+		E52BE793180E55D200A3131B /* DomobAdSDKBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DomobAdSDKBundle.bundle; sourceTree = "<group>"; };
+		E52BE794180E55D200A3131B /* libDomobAdSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libDomobAdSDK.a; sourceTree = "<group>"; };
 		E567E01217F5857B00446E72 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		E567E01417F5858700446E72 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		E567E01617F5859000446E72 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
@@ -105,13 +120,11 @@
 		E567E01A17F585A700446E72 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		E567E01C17F585B100446E72 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		E567E01E17F585BB00446E72 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
-		E567E02017F586D900446E72 /* DMFeedsAdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMFeedsAdViewController.h; sourceTree = "<group>"; };
-		E567E02117F586D900446E72 /* DMFeedsAdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMFeedsAdViewController.m; sourceTree = "<group>"; };
-		E567E02217F586D900446E72 /* DMFeedsAdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DMFeedsAdViewController.xib; sourceTree = "<group>"; };
 		E5DF4829179682640095388E /* DMFlexibleSampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMFlexibleSampleViewController.h; sourceTree = "<group>"; };
 		E5DF482A179682640095388E /* DMFlexibleSampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMFlexibleSampleViewController.m; sourceTree = "<group>"; };
 		E5DF482C1796828F0095388E /* DMFlexibleSampleViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DMFlexibleSampleViewController_iPhone.xib; sourceTree = "<group>"; };
-		E5DF482E179682A60095388E /* DMFlexibleSampleViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DMFlexibleSampleViewController_iPad.xib; sourceTree = "<group>"; };
+		E5F80E7E18152E1F00168C05 /* DMFeedsAdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DMFeedsAdViewController.xib; sourceTree = "<group>"; };
+		E5F80E8018152F6900168C05 /* DMFlexibleSampleViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DMFlexibleSampleViewController_iPad.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +143,7 @@
 				1D08E8421622DDDD004FC1AC /* UIKit.framework in Frameworks */,
 				1D08E8461622DDDD004FC1AC /* CoreGraphics.framework in Frameworks */,
 				1D8D22461623D12F00F037AA /* SystemConfiguration.framework in Frameworks */,
+				E52BE796180E55D200A3131B /* libDomobAdSDK.a in Frameworks */,
 				1D8D224B1623D13A00F037AA /* AdSupport.framework in Frameworks */,
 				1D8D22491623D13500F037AA /* CoreLocation.framework in Frameworks */,
 				1DD51E7116549DC8009CDEB2 /* StoreKit.framework in Frameworks */,
@@ -207,6 +221,7 @@
 		1D08E8471622DDDD004FC1AC /* DomobSample */ = {
 			isa = PBXGroup;
 			children = (
+				E52BE78B180E55D200A3131B /* DomobAdSDK */,
 				1D08E8501622DDDD004FC1AC /* DMAppDelegate.h */,
 				1D08E8511622DDDD004FC1AC /* DMAppDelegate.m */,
 				1D08E8591622DDDD004FC1AC /* DMInlineSampleViewController.h */,
@@ -215,8 +230,8 @@
 				1D08E8611622DDDD004FC1AC /* DMInterstitialSampleViewController.m */,
 				E5DF4829179682640095388E /* DMFlexibleSampleViewController.h */,
 				E5DF482A179682640095388E /* DMFlexibleSampleViewController.m */,
-				E567E02017F586D900446E72 /* DMFeedsAdViewController.h */,
-				E567E02117F586D900446E72 /* DMFeedsAdViewController.m */,
+				E52BE786180E369D00A3131B /* DMFeedsAdViewController.h */,
+				E52BE787180E369D00A3131B /* DMFeedsAdViewController.m */,
 				1D08E8781622DFE9004FC1AC /* Resources */,
 				1D08E8481622DDDD004FC1AC /* Supporting Files */,
 			);
@@ -226,6 +241,8 @@
 		1D08E8481622DDDD004FC1AC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E52BE783180E365000A3131B /* EGORefreshTableHeaderView.h */,
+				E52BE784180E365000A3131B /* EGORefreshTableHeaderView.m */,
 				1D08E8491622DDDD004FC1AC /* DomobSample-Info.plist */,
 				1D08E84A1622DDDD004FC1AC /* InfoPlist.strings */,
 				1D08E84D1622DDDD004FC1AC /* main.m */,
@@ -248,10 +265,33 @@
 				1D8D224C162405DA00F037AA /* DMInterstitialSampleViewController_iPhone.xib */,
 				1D08E8701622DDDD004FC1AC /* DMInterstitialSampleViewController_iPad.xib */,
 				E5DF482C1796828F0095388E /* DMFlexibleSampleViewController_iPhone.xib */,
-				E5DF482E179682A60095388E /* DMFlexibleSampleViewController_iPad.xib */,
-				E567E02217F586D900446E72 /* DMFeedsAdViewController.xib */,
+				E5F80E8018152F6900168C05 /* DMFlexibleSampleViewController_iPad.xib */,
+				E5F80E7E18152E1F00168C05 /* DMFeedsAdViewController.xib */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		E52BE78B180E55D200A3131B /* DomobAdSDK */ = {
+			isa = PBXGroup;
+			children = (
+				E52BE78C180E55D200A3131B /* DMAdView.h */,
+				E52BE78D180E55D200A3131B /* DMFeedsAdView.h */,
+				E52BE78E180E55D200A3131B /* DMInterstitialAdController.h */,
+				E52BE78F180E55D200A3131B /* DMRTSplashAdController.h */,
+				E52BE790180E55D200A3131B /* DMSplashAdController.h */,
+				E52BE791180E55D200A3131B /* DMTools.h */,
+				E52BE792180E55D200A3131B /* DomobAdSDKBundle */,
+				E52BE794180E55D200A3131B /* libDomobAdSDK.a */,
+			);
+			path = DomobAdSDK;
+			sourceTree = "<group>";
+		};
+		E52BE792180E55D200A3131B /* DomobAdSDKBundle */ = {
+			isa = PBXGroup;
+			children = (
+				E52BE793180E55D200A3131B /* DomobAdSDKBundle.bundle */,
+			);
+			path = DomobAdSDKBundle;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,10 +349,10 @@
 				1D08E84C1622DDDD004FC1AC /* InfoPlist.strings in Resources */,
 				1D08E85D1622DDDD004FC1AC /* first.png in Resources */,
 				1D08E85F1622DDDD004FC1AC /* first@2x.png in Resources */,
+				E52BE795180E55D200A3131B /* DomobAdSDKBundle.bundle in Resources */,
 				1D08E8641622DDDD004FC1AC /* second.png in Resources */,
 				1D08E8661622DDDD004FC1AC /* second@2x.png in Resources */,
 				1D08E8691622DDDD004FC1AC /* DMInlineSampleViewController_iPhone.xib in Resources */,
-				E567E02417F586D900446E72 /* DMFeedsAdViewController.xib in Resources */,
 				1D08E86C1622DDDD004FC1AC /* DMInlineSampleViewController_iPad.xib in Resources */,
 				1D08E8721622DDDD004FC1AC /* DMInterstitialSampleViewController_iPad.xib in Resources */,
 				1D8D224E162405DA00F037AA /* DMInterstitialSampleViewController_iPhone.xib in Resources */,
@@ -326,7 +366,8 @@
 				1D031E3217326788006948D9 /* Default.png in Resources */,
 				1D031E331732678B006948D9 /* Default@2x.png in Resources */,
 				E5DF482D1796828F0095388E /* DMFlexibleSampleViewController_iPhone.xib in Resources */,
-				E5DF482F179682A60095388E /* DMFlexibleSampleViewController_iPad.xib in Resources */,
+				E5F80E7F18152E1F00168C05 /* DMFeedsAdViewController.xib in Resources */,
+				E5F80E8118152F6900168C05 /* DMFlexibleSampleViewController_iPad.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,9 +380,10 @@
 			files = (
 				1D08E84E1622DDDD004FC1AC /* main.m in Sources */,
 				1D08E8521622DDDD004FC1AC /* DMAppDelegate.m in Sources */,
-				E567E02317F586D900446E72 /* DMFeedsAdViewController.m in Sources */,
+				E52BE789180E369D00A3131B /* DMFeedsAdViewController.m in Sources */,
 				1D08E85B1622DDDD004FC1AC /* DMInlineSampleViewController.m in Sources */,
 				1D08E8621622DDDD004FC1AC /* DMInterstitialSampleViewController.m in Sources */,
+				E52BE785180E365000A3131B /* EGORefreshTableHeaderView.m in Sources */,
 				E5DF482B179682640095388E /* DMFlexibleSampleViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -444,6 +486,7 @@
 		1D08E8761622DDDD004FC1AC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: 同乐 苏 (29VXSF7ZQM)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DomobSample/DomobSample-Prefix.pch";
 				INFOPLIST_FILE = "DomobSample/DomobSample-Info.plist";
@@ -462,6 +505,7 @@
 		1D08E8771622DDDD004FC1AC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: 同乐 苏 (29VXSF7ZQM)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DomobSample/DomobSample-Prefix.pch";
 				INFOPLIST_FILE = "DomobSample/DomobSample-Info.plist";

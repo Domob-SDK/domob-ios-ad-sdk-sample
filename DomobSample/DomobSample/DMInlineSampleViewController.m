@@ -29,6 +29,10 @@
         if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone)
         {
             _adSize = DOMOB_AD_SIZE_320x50;
+            if (!([[[UIDevice currentDevice] systemVersion] floatValue] < 7.0)) {
+                _adY = 20;
+            }
+            
         }
         else
         {

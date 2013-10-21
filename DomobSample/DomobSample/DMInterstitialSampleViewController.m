@@ -22,7 +22,7 @@
     }
     return self;
 }
-							
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -47,15 +47,7 @@
     _dmInterstitial.delegate = self;
     // load advertisement
     [_dmInterstitial loadAd];
-     
-}
-
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-
-    _dmInterstitial.delegate = nil; // please set delegete = nil first
-    [_dmInterstitial release]; // release
+    
 }
 
 -(void)dealloc
@@ -117,7 +109,7 @@
 - (void)dmInterstitialDidDismissScreen:(DMInterstitialAdController *)dmInterstitial
 {
     NSLog(@"[Domob Interstitial] did dismiss.");
-
+    
     // 插屏广告关闭后，加载一条新广告用于下次呈现
     //prepair for the next advertisement view
     [_dmInterstitial loadAd];

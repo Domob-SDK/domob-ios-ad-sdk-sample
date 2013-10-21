@@ -24,36 +24,37 @@
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
-     self.tabBarController = [[[UITabBarController alloc] init] autorelease];
+    self.tabBarController = [[[UITabBarController alloc] init] autorelease];
+    self.tabBarController.delegate = self;
     UIViewController *viewController1, *viewController2,*viewController3,*viewController4;
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
         viewController1 = [[[DMInlineSampleViewController alloc]
-                                initWithNibName:@"DMInlineSampleViewController_iPhone"
-                                bundle:nil] autorelease];
+                            initWithNibName:@"DMInlineSampleViewController_iPhone"
+                            bundle:nil] autorelease];
         viewController2 = [[[DMInterstitialSampleViewController alloc]
-                                initWithNibName:@"DMInterstitialSampleViewController_iPhone"
-                                bundle:nil] autorelease];
+                            initWithNibName:@"DMInterstitialSampleViewController_iPhone"
+                            bundle:nil] autorelease];
         viewController3 = [[[DMFlexibleSampleViewController alloc]
-                                initWithNibName:@"DMFlexibleSampleViewController_iPhone"
-                                bundle:nil] autorelease];
+                            initWithNibName:@"DMFlexibleSampleViewController_iPhone"
+                            bundle:nil] autorelease];
         viewController4 = [[[DMFeedsAdViewController alloc]
-                                initWithNibName:@"DMFeedsAdViewController"
-                                bundle:nil] autorelease];
-       
+                            initWithNibName:@"DMFeedsAdViewController"
+                            bundle:nil] autorelease];
+        
         self.tabBarController.viewControllers = @[viewController1, viewController2,viewController3,viewController4];
     } else {
         viewController1 = [[[DMInlineSampleViewController alloc]
-                                initWithNibName:@"DMInlineSampleViewController_iPad"
-                                bundle:nil] autorelease];
+                            initWithNibName:@"DMInlineSampleViewController_iPad"
+                            bundle:nil] autorelease];
         viewController2 = [[[DMInterstitialSampleViewController alloc]
-                                initWithNibName:@"DMInterstitialSampleViewController_iPad"
-                                bundle:nil] autorelease];
-         viewController3 = [[[DMFlexibleSampleViewController alloc]
-                                 initWithNibName:@"DMFlexibleSampleViewController_iPad"
-                                 bundle:nil] autorelease];
-          self.tabBarController.viewControllers = @[viewController1, viewController2,viewController3];
+                            initWithNibName:@"DMInterstitialSampleViewController_iPad"
+                            bundle:nil] autorelease];
+        viewController3 = [[[DMFlexibleSampleViewController alloc]
+                            initWithNibName:@"DMFlexibleSampleViewController_iPad"
+                            bundle:nil] autorelease];
+        self.tabBarController.viewControllers = @[viewController1, viewController2,viewController3];
     }
-   
+    
     self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
     
@@ -101,19 +102,19 @@
     } else {
         DMRTSplashAdController* rtsplashAd = nil;
         rtsplashAd = [[DMRTSplashAdController alloc] initWithPublisherId:@"56OJyM1ouMGoULfJaL"//@"56OJy3zouMZM2KpAFd"
-                                                              placementId:@"16TLwebvAchkAY6iOVhpfHPs"
-                                                                     size:adSize
-                                                                   offset:233.5f
-                                                                   window:self.window
-                                                               background:bgColor
-                                                                animation:YES];
+                                                             placementId:@"16TLwebvAchkAY6iOVhpfHPs"
+                                                                    size:adSize
+                                                                  offset:233.5f
+                                                                  window:self.window
+                                                              background:bgColor
+                                                               animation:YES];
         
         
         rtsplashAd.delegate = self;
         [rtsplashAd present];
         [rtsplashAd release];
     }
-
+    
     return YES;
 }
 
@@ -133,7 +134,7 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
+    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
 }
 
@@ -152,19 +153,25 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
-/*
-// Optional UITabBarControllerDelegate method.
-- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
-{
-}
-*/
+
+ // Optional UITabBarControllerDelegate method.
+ - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
+ {
+     if (![viewController isKindOfClass:[DMFeedsAdViewController class]]) {
+         
+         [[NSNotificationCenter defaultCenter] postNotification:
+          [NSNotification notificationWithName:@"closeFeedsAdView" object:self]];
+     }
+
+ }
+
 
 /*
-// Optional UITabBarControllerDelegate method.
-- (void)tabBarController:(UITabBarController *)tabBarController didEndCustomizingViewControllers:(NSArray *)viewControllers changed:(BOOL)changed
-{
-}
-*/
+ // Optional UITabBarControllerDelegate method.
+ - (void)tabBarController:(UITabBarController *)tabBarController didEndCustomizingViewControllers:(NSArray *)viewControllers changed:(BOOL)changed
+ {
+ }
+ */
 
 #pragma mark -
 #pragma makr Domob Splash Ad Delegate

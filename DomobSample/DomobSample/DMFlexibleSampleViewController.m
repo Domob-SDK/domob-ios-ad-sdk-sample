@@ -13,8 +13,7 @@
 
 @interface DMFlexibleSampleViewController ()
 {
-    CGSize _adSize;
-    CGFloat _adX, _adY;
+    CGPoint origin;
 }
 
 @end
@@ -27,7 +26,10 @@
     if (self) {
         self.title = NSLocalizedString(@"Flexible", @"Flexible");
         self.tabBarItem.image = [UIImage imageNamed:@"first"];
-        
+        origin = CGPointMake(0, 0);
+        if (!([[[UIDevice currentDevice] systemVersion] floatValue] < 7.0)) {
+            origin = CGPointMake(0, 20);
+        }
     }
     return self;
     
@@ -46,16 +48,15 @@
     // Set the frame of advertisement view
     if (UIInterfaceOrientationIsLandscape([UIApplication sharedApplication].statusBarOrientation))
     {
-        _dmFlexibleAdView.frame = CGRectMake(0,
-                                             _adY,
+        _dmFlexibleAdView.frame = CGRectMake(origin.x,
+                                             origin.y,
                                              FLEXIBLE_SIZE_LANDSCAPE.width,
                                              FLEXIBLE_SIZE_LANDSCAPE.height);
-        NSLog(@"UIInterfaceOrientationIsLandscape");
     }
     else
     {
-        _dmFlexibleAdView.frame = CGRectMake(0,
-                                             _adY,
+        _dmFlexibleAdView.frame = CGRectMake(origin.x,
+                                             origin.y,
                                              FLEXIBLE_SIZE_PORTRAIT.width,
                                              FLEXIBLE_SIZE_PORTRAIT.height);
         
@@ -145,28 +146,28 @@
 // This method will be used after load successfully
 - (void)dmAdViewSuccessToLoadAd:(DMAdView *)adView
 {
-    NSLog(@"[Domob Sample] success to load ad.");
+    NSLog(@"[Domob Flexible] success to load ad.");
 }
 
 // 加载广告失败后，回调该方法
 // This method will be used after load failed
 - (void)dmAdViewFailToLoadAd:(DMAdView *)adView withError:(NSError *)error
 {
-    NSLog(@"[Domob Sample] fail to load ad. %@", error);
+    NSLog(@"[Domob Flexible] fail to load ad. %@", error);
 }
 
 // 当将要呈现出 Modal View 时，回调该方法。如打开内置浏览器
 // When will be showing a Modal View, this method will be called. Such as open built-in browser
 - (void)dmWillPresentModalViewFromAd:(DMAdView *)adView
 {
-    NSLog(@"[Domob Sample] will present modal view.");
+    NSLog(@"[Domob Flexible] will present modal view.");
 }
 
 // 当呈现的 Modal View 被关闭后，回调该方法。如内置浏览器被关闭。
 // When presented Modal View is closed, this method will be called. Such as built-in browser is closed
 - (void)dmDidDismissModalViewFromAd:(DMAdView *)adView
 {
-    NSLog(@"[Domob Sample] did dismiss modal view.");
+    NSLog(@"[Domob Flexible] did dismiss modal view.");
 }
 
 // 当因用户的操作（如点击下载类广告，需要跳转到Store），需要离开当前应用时，回调该方法
@@ -174,7 +175,7 @@
 //(such as clicking download class advertising, you need to jump to the Store), need to leave the current application, this method will be called
 - (void)dmApplicationWillEnterBackgroundFromAd:(DMAdView *)adView
 {
-    NSLog(@"[Domob Sample] will enter background.");
+    NSLog(@"[Domob Flexible] will enter background.");
 }
 
 
