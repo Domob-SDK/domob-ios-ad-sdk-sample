@@ -68,7 +68,7 @@
         defaultImgName = @"Default-Portrait";
         offset = 374.0f;
     } else {
-        adSize = DOMOB_AD_SIZE_320x240;
+        adSize = DOMOB_AD_SIZE_320x400;
         if ([UIScreen mainScreen].bounds.size.height > 480.0f) {
             defaultImgName = @"Default-568h";
             offset = 233.0f;
