@@ -498,9 +498,8 @@
 				INFOPLIST_FILE = "DomobSample/DomobSample-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = (
-					"\\\"$(SRCROOT)/DomobSample/DomobAdSDK\\\"",
+					"\"$(SRCROOT)/DomobSample/DomobAdSDK\"",
 					"$(inherited)",
-					"/Users/sutongle/Documents/GitHub/domob-ios-ad-sdk-sample/DomobSample/DomobSample/DomobAdSDK",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -518,9 +517,8 @@
 				INFOPLIST_FILE = "DomobSample/DomobSample-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = (
-					"\\\"$(SRCROOT)/DomobSample/DomobAdSDK\\\"",
+					"\"$(SRCROOT)/DomobSample/DomobAdSDK\"",
 					"$(inherited)",
-					"/Users/sutongle/Documents/GitHub/domob-ios-ad-sdk-sample/DomobSample/DomobSample/DomobAdSDK",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
