@@ -101,8 +101,8 @@
         [_splashAd release];
     } else {
         DMRTSplashAdController* rtsplashAd = nil;
-        rtsplashAd = [[DMRTSplashAdController alloc] initWithPublisherId:@"56OJyM1ouMGoULfJaL"//@"56OJy3zouMZM2KpAFd"
-                                                             placementId:@"16TLwebvAchkAY6iOVhpfHPs"
+        rtsplashAd = [[DMRTSplashAdController alloc] initWithPublisherId:testPubID
+                                                             placementId:testSplashPlacementID
                                                                     size:adSize
                                                                   offset:233.5f
                                                                   window:self.window
