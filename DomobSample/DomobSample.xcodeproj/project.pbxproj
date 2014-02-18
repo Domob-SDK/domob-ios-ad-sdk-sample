@@ -44,6 +44,8 @@
 		E50653651843675800648CEF /* DMFlexibleSampleViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = E50653631843675800648CEF /* DMFlexibleSampleViewController_iPhone.xib */; };
 		E50653661843675800648CEF /* DMFlexibleSampleViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = E50653641843675800648CEF /* DMFlexibleSampleViewController_iPad.xib */; };
 		E515CFCC177D8EF700CF4F99 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E515CFCB177D8EF700CF4F99 /* AudioToolbox.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		E526830618ADF13D0045FDF7 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E526830518ADF13D0045FDF7 /* MessageUI.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		E526830818ADF1460045FDF7 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E526830718ADF1460045FDF7 /* CoreTelephony.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		E52BE785180E365000A3131B /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = E52BE784180E365000A3131B /* EGORefreshTableHeaderView.m */; };
 		E52BE789180E369D00A3131B /* DMFeedsAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E52BE787180E369D00A3131B /* DMFeedsAdViewController.m */; };
 		E567E01317F5857B00446E72 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E567E01217F5857B00446E72 /* CoreText.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -103,6 +105,8 @@
 		E50653631843675800648CEF /* DMFlexibleSampleViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DMFlexibleSampleViewController_iPhone.xib; sourceTree = "<group>"; };
 		E50653641843675800648CEF /* DMFlexibleSampleViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DMFlexibleSampleViewController_iPad.xib; sourceTree = "<group>"; };
 		E515CFCB177D8EF700CF4F99 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		E526830518ADF13D0045FDF7 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		E526830718ADF1460045FDF7 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		E52BE783180E365000A3131B /* EGORefreshTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGORefreshTableHeaderView.h; sourceTree = "<group>"; };
 		E52BE784180E365000A3131B /* EGORefreshTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGORefreshTableHeaderView.m; sourceTree = "<group>"; };
 		E52BE786180E369D00A3131B /* DMFeedsAdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMFeedsAdViewController.h; sourceTree = "<group>"; };
@@ -132,6 +136,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E526830818ADF1460045FDF7 /* CoreTelephony.framework in Frameworks */,
+				E526830618ADF13D0045FDF7 /* MessageUI.framework in Frameworks */,
 				E567E01F17F585BB00446E72 /* CFNetwork.framework in Frameworks */,
 				E567E01D17F585B100446E72 /* MobileCoreServices.framework in Frameworks */,
 				E567E01B17F585A700446E72 /* libz.dylib in Frameworks */,
@@ -194,6 +200,8 @@
 		1D08E8401622DDDD004FC1AC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E526830718ADF1460045FDF7 /* CoreTelephony.framework */,
+				E526830518ADF13D0045FDF7 /* MessageUI.framework */,
 				E567E01E17F585BB00446E72 /* CFNetwork.framework */,
 				E567E01C17F585B100446E72 /* MobileCoreServices.framework */,
 				E567E01A17F585A700446E72 /* libz.dylib */,
@@ -491,8 +499,8 @@
 		1D08E8761622DDDD004FC1AC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: 同乐 苏 (29VXSF7ZQM)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: 同乐 苏 (29VXSF7ZQM)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DomobSample/DomobSample-Prefix.pch";
 				INFOPLIST_FILE = "DomobSample/DomobSample-Info.plist";
@@ -502,7 +510,7 @@
 					"$(inherited)",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "EDDE1F43-9593-4ECA-9E04-BC16832A2167";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -510,8 +518,8 @@
 		1D08E8771622DDDD004FC1AC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: 同乐 苏 (29VXSF7ZQM)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: 同乐 苏 (29VXSF7ZQM)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DomobSample/DomobSample-Prefix.pch";
 				INFOPLIST_FILE = "DomobSample/DomobSample-Info.plist";
@@ -521,7 +529,7 @@
 					"$(inherited)",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "EDDE1F43-9593-4ECA-9E04-BC16832A2167";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
