@@ -1,8 +1,6 @@
 //
 //  DMRTSplashAdController.h
-//  DomobAdSDK
 //
-//  Created by Johnny on 13-5-14.
 //  Copyright (c) 2013年 Domob Ltd. All rights reserved.
 //
 

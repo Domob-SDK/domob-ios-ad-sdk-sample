@@ -8,8 +8,8 @@
 #import "DMFeedsAdViewController.h"
 
 
-#define DM_PUBLISHER_ID @"56OJyM1ouMGoULfJaL"
-#define DM_PLACEMENT_ID @"16TLwebvAchkANUGSzRHJYcs"
+#define DM_PUBLISHER_ID @"56OJw9AYuNKiHb9ZLV"
+#define DM_PLACEMENT_ID @""
 
 @interface DMFeedsAdViewController ()
 {
@@ -40,6 +40,7 @@
                                         self.view.frame.size.height);
     }
      /**feeds ad view  **/
+  
     _feedsView = [[DMFeedsAdView alloc]initWithPublisherId:DM_PUBLISHER_ID
                                                placementId:DM_PLACEMENT_ID
                                                     origin:CGPointMake(0, 20)];
@@ -48,7 +49,7 @@
     _feedsView.delegate = self;
     
     [_feedsView loadAd];
-    
+
     
     /** refresh view  **/
     if (_refreshHeaderView == nil) {

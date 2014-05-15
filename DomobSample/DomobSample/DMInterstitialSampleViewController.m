@@ -40,8 +40,8 @@
     UIViewController *rootViewController = [UIApplication sharedApplication].keyWindow.rootViewController;
     //　初始化插屏广告，此处使用的是测试ID，请登陆多盟官网（www.domob.cn）获取新的ID
     // Get your own ID from Domob website
-    _dmInterstitial = [[DMInterstitialAdController alloc] initWithPublisherId:@"56OJyM1ouMGoULfJaL"
-                                                                  placementId:@"16TLwebvAchkAY6iOWkE6kpk"
+    _dmInterstitial = [[DMInterstitialAdController alloc] initWithPublisherId:@"56OJyGFYuMOI695Q87"
+                                                                  placementId:@"16TLwMxaAc0izY7NJoP2Ihfz"
                                                            rootViewController:rootViewController
                                                                          size:adSize];
     _dmInterstitial.delegate = self;

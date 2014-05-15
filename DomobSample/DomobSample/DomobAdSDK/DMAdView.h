@@ -17,9 +17,7 @@
 #define DOMOB_AD_SIZE_600x500   CGSizeMake(600, 500)
 
 // For flexible banner
-#define FLEXIBLE_SIZE_PORTRAIT (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad? CGSizeMake(0, 90):CGSizeMake(0, 50))
-
-#define FLEXIBLE_SIZE_LANDSCAPE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad? CGSizeMake(0, 90):CGSizeMake(0, 50))
+#define FLEXIBLE_SIZE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad? CGSizeMake(0, 90):CGSizeMake(0, 50))
 
 
 typedef enum
@@ -36,16 +34,20 @@ typedef enum
 
 // init ad view
 - (id)initWithPublisherId:(NSString *)publisherId // Publisher ID
-              placementId:(NSString *)placementId // Placement ID
-                     size:(CGSize)adSize;         // size for ad view
+              placementId:(NSString *)placementId; // Placement ID
 
 - (id)initWithPublisherId:(NSString *)publisherId // Publisher ID
               placementId:(NSString *)placementId // Placement ID
-                     size:(CGSize)adSize          // size for ad view
               autorefresh:(BOOL)autorefresh;      // set auto refresh
+
+//新增设置size方法
+- (void)setAdSize:(CGSize)adSize;
 
 // load ad view
 - (void)loadAd;
+
+//Flexible专用的方法 用于横竖屏切换 移除原有视图 并重新请求
+- (void)orientationChanged;
 
 // The user's current location
 - (void)setLocation:(CLLocation *)location;

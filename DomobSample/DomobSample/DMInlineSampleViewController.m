@@ -26,19 +26,24 @@
         
         // 确定广告尺寸及位置
         //Set the size and origin
+        _adX = 0;
+        
         if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone)
         {
-            _adSize = DOMOB_AD_SIZE_320x50;
+         
             if (!([[[UIDevice currentDevice] systemVersion] floatValue] < 7.0)) {
+                
                 _adY = 20;
+                
+            }else{
+                
             }
             
         }
         else
         {
-            _adSize = DOMOB_AD_SIZE_728x90;
-            _adX = ([UIScreen mainScreen].bounds.size.width - _adSize.width) / 2;
-            _adY = 44;
+    
+            _adY = 20;
         }
         
         
@@ -55,28 +60,6 @@
     [super dealloc];
 }
 
--(void)viewWillAppear:(BOOL)animated
-{
-    
-    CGSize screenSize = [UIScreen mainScreen].bounds.size;
-    if (UIInterfaceOrientationIsLandscape([UIApplication sharedApplication].statusBarOrientation))
-    {
-        _dmAdView.frame = CGRectMake((screenSize.height - _adSize.width) / 2,
-                                     _adY,
-                                     _dmAdView.frame.size.width,
-                                     _dmAdView.frame.size.height);
-    }
-    else
-    {
-        _dmAdView.frame = CGRectMake((screenSize.width - _adSize.width) / 2,
-                                     _adY,
-                                     _dmAdView.frame.size.width,
-                                     _dmAdView.frame.size.height);
-    }
-    
-    
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -86,13 +69,13 @@
     ////////////////////////////////////////////////////////////////////////////////////////////////
     // 创建广告视图，此处使用的是测试ID，请登陆多盟官网（www.domob.cn）获取新的ID
     // Creat advertisement view please get your own ID from domob website
-    _dmAdView = [[DMAdView alloc] initWithPublisherId:@"56OJyM1ouMGoULfJaL"
-                                          placementId:@"16TLwebvAchkAY6iOMd734jz"
-                                                 size:_adSize];
     
-    // 设置广告视图的位置
+    _dmAdView = [[DMAdView alloc] initWithPublisherId:@"56OJyGFYuMOI695Q87"
+                                          placementId:@"16TLwMxaAc0izY7NJgmfgl5k"];
+    
+    // 设置广告视图的位置 宽与高设置为0即可 该广告视图默认是横竖屏自适应 但需要在旋转时调用orientationChanged 方法
     // Set the frame of advertisement view
-    _dmAdView.frame = CGRectMake(_adX, _adY, _adSize.width, _adSize.height);
+    _dmAdView.frame = CGRectMake(_adX, _adY, FLEXIBLE_SIZE.width,FLEXIBLE_SIZE.height);
     _dmAdView.delegate = self;
     _dmAdView.rootViewController = self; // set RootViewController
     [self.view addSubview:_dmAdView];
@@ -102,30 +85,18 @@
     ////////////////////////////////////////////////////////////////////////////////////////////////
     // 检查评价提醒，此处使用的是测试ID，请登陆多盟官网（www.domob.cn）获取新的ID
     // Check for rate please get your own ID from Domob website
-    DMTools *_dmTools = [[DMTools alloc] initWithPublisherId:@"56OJyM1ouMGoULfJaL"];
+    DMTools *_dmTools = [[DMTools alloc] initWithPublisherId:@"56OJyGFYuMOI695Q87"];
     [_dmTools checkRateInfo];
     [_dmTools release];
     
 }
 
+//针对Banner的横竖屏自适应方法
+//method For multible orientation
 - (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
                                 duration:(NSTimeInterval)duration
 {
-    CGSize screenSize = [UIScreen mainScreen].bounds.size;
-    if (UIInterfaceOrientationIsLandscape(toInterfaceOrientation))
-    {
-        _dmAdView.frame = CGRectMake((screenSize.height - _adSize.width) / 2,
-                                     _adY,
-                                     _dmAdView.frame.size.width,
-                                     _dmAdView.frame.size.height);
-    }
-    else
-    {
-        _dmAdView.frame = CGRectMake((screenSize.width - _adSize.width) / 2,
-                                     _adY,
-                                     _dmAdView.frame.size.width,
-                                     _dmAdView.frame.size.height);
-    }
+    [_dmAdView orientationChanged];
 }
 
 #pragma mark -

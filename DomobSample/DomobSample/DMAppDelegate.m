@@ -8,7 +8,6 @@
 #import "DMAppDelegate.h"
 #import "DMInlineSampleViewController.h"
 #import "DMInterstitialSampleViewController.h"
-#import "DMFlexibleSampleViewController.h"
 #import "DMFeedsAdViewController.h"
 
 @implementation DMAppDelegate
@@ -26,7 +25,7 @@
     // Override point for customization after application launch.
     self.tabBarController = [[[UITabBarController alloc] init] autorelease];
     self.tabBarController.delegate = self;
-    UIViewController *viewController1, *viewController2,*viewController3,*viewController4;
+    UIViewController *viewController1, *viewController2,*viewController3;
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
         viewController1 = [[[DMInlineSampleViewController alloc]
                             initWithNibName:@"DMInlineSampleViewController_iPhone"
@@ -34,14 +33,11 @@
         viewController2 = [[[DMInterstitialSampleViewController alloc]
                             initWithNibName:@"DMInterstitialSampleViewController_iPhone"
                             bundle:nil] autorelease];
-        viewController3 = [[[DMFlexibleSampleViewController alloc]
-                            initWithNibName:@"DMFlexibleSampleViewController_iPhone"
-                            bundle:nil] autorelease];
-        viewController4 = [[[DMFeedsAdViewController alloc]
+        viewController3 = [[[DMFeedsAdViewController alloc]
                             initWithNibName:@"DMFeedsAdViewController"
                             bundle:nil] autorelease];
         
-        self.tabBarController.viewControllers = @[viewController1, viewController2,viewController3,viewController4];
+        self.tabBarController.viewControllers = @[viewController1, viewController2,viewController3];
     } else {
         viewController1 = [[[DMInlineSampleViewController alloc]
                             initWithNibName:@"DMInlineSampleViewController_iPad"
@@ -49,10 +45,7 @@
         viewController2 = [[[DMInterstitialSampleViewController alloc]
                             initWithNibName:@"DMInterstitialSampleViewController_iPad"
                             bundle:nil] autorelease];
-        viewController3 = [[[DMFlexibleSampleViewController alloc]
-                            initWithNibName:@"DMFlexibleSampleViewController_iPad"
-                            bundle:nil] autorelease];
-        self.tabBarController.viewControllers = @[viewController1, viewController2,viewController3];
+        self.tabBarController.viewControllers = @[viewController1, viewController2];
     }
     
     self.window.rootViewController = self.tabBarController;
@@ -77,19 +70,17 @@
         }
     }
     
-    BOOL isCacheSplash = NO;
+    BOOL isCacheSplash = YES;
     // 选择测试缓存开屏还是实时开屏，NO为实时开屏。
     // Choose NO or YES for RealTimeSplashView or SplashView
     // 初始化开屏广告控制器，此处使用的是测试ID，请登陆多盟官网（www.domob.cn）获取新的ID
     // Get your ID from Domob website
-    NSString* testPubID = @"56OJyM1ouMGoULfJaL";
-    NSString* testSplashPlacementID = @"16TLwebvAchkAY6iOVhpfHPs";
+    NSString* testPubID = @"56OJyGFYuMOI695Q87";
+    NSString* testSplashPlacementID = @"16TLuy4aAp-v1NUf4eTstZfk";
     UIColor* bgColor = [UIColor colorWithPatternImage:[UIImage imageNamed:defaultImgName]];
     if (isCacheSplash) {
         _splashAd = [[DMSplashAdController alloc] initWithPublisherId:testPubID
                                                           placementId:testSplashPlacementID
-                                                                 size:adSize
-                                                               offset:offset
                                                                window:self.window
                                                            background:bgColor
                                                             animation:YES];
@@ -97,6 +88,7 @@
         if (_splashAd.isReady)
         {
             [_splashAd present];
+           // [_splashAd alphaToTop];
         }
         [_splashAd release];
     } else {

@@ -1,6 +1,5 @@
 //
 //  DMFeedsAdView.h
-//  DomobAdSDK
 //
 //  Copyright (c) 2013年 Domob Ltd. All rights reserved.
 //

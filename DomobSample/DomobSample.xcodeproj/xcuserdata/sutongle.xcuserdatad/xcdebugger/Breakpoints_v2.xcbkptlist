@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DomobSample/DMFeedsAdViewController.m"
-            timestampString = "403591941.936384"
+            timestampString = "417509558.979464"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "143"
-            endingLineNumber = "143"
+            startingLineNumber = "144"
+            endingLineNumber = "144"
             landmarkName = "-reloadTableViewDataSource"
             landmarkType = "5">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DomobSample/DMFeedsAdViewController.m"
-            timestampString = "403591941.936384"
+            timestampString = "417509558.979464"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "158"
-            endingLineNumber = "158"
+            startingLineNumber = "159"
+            endingLineNumber = "159"
             landmarkName = "-doneLoadingTableViewData"
             landmarkType = "5">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DomobSample/DMFeedsAdViewController.m"
-            timestampString = "403591941.936384"
+            timestampString = "417509558.979464"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "146"
-            endingLineNumber = "146"
+            startingLineNumber = "147"
+            endingLineNumber = "147"
             landmarkName = "-reloadTableViewDataSource"
             landmarkType = "5">
          </BreakpointContent>
@@ -58,43 +58,45 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DomobSample/DMInlineSampleViewController.m"
-            timestampString = "412083196.316491"
+            timestampString = "421748455.544424"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "105"
-            endingLineNumber = "105"
-            landmarkName = "-viewDidLoad"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
+            landmarkName = "-dmWillPresentModalViewFromAd:"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[DMInlineSampleViewController viewDidLoad]"
-                  moduleName = "DomobSample"
-                  urlString = "file:///Users/sutongle/Documents/GitHub/domob-ios-ad-sdk-sample/DomobSample/DomobSample/DMInlineSampleViewController.m"
-                  timestampString = "412135025.033842"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "105"
-                  endingLineNumber = "105"
-                  offsetFromSymbolStart = "662">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[DMInlineSampleViewController viewDidLoad]"
-                  moduleName = "DomobSample"
-                  urlString = "file:///Users/sutongle/Documents/GitHub/domob-ios-ad-sdk-sample/DomobSample/DomobSample/DMInlineSampleViewController.m"
-                  timestampString = "412135028.327213"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "105"
-                  endingLineNumber = "105"
-                  offsetFromSymbolStart = "658">
-               </Location>
-            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DomobSample/DMInlineSampleViewController.m"
+            timestampString = "421748455.544424"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
+            landmarkName = "-dmDidDismissModalViewFromAd:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DomobSample/DMInlineSampleViewController.m"
+            timestampString = "421748455.544424"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "135"
+            endingLineNumber = "135"
+            landmarkName = "-dmApplicationWillEnterBackgroundFromAd:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
