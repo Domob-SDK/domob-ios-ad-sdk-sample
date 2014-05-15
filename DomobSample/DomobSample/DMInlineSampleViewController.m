@@ -8,6 +8,9 @@
 #import "DMInlineSampleViewController.h"
 #import "DMTools.h"
 
+#define DMPUBLISHERID        @"56OJyM1ouMGoULfJaL"
+#define DMPLCAEMENTID_BANNER @"16TLwebvAchkANUH_krQ7vOz"
+
 @interface DMInlineSampleViewController ()
 {
     CGSize _adSize;
@@ -69,9 +72,9 @@
     ////////////////////////////////////////////////////////////////////////////////////////////////
     // 创建广告视图，此处使用的是测试ID，请登陆多盟官网（www.domob.cn）获取新的ID
     // Creat advertisement view please get your own ID from domob website
-    
-    _dmAdView = [[DMAdView alloc] initWithPublisherId:@"56OJyGFYuMOI695Q87"
-                                          placementId:@"16TLwMxaAc0izY7NJgmfgl5k"];
+#warning please change the DMPUBLISHERID and the DMPLCAEMENTID_BANNER
+    _dmAdView = [[DMAdView alloc] initWithPublisherId:DMPUBLISHERID
+                                          placementId:DMPLCAEMENTID_BANNER];
     
     // 设置广告视图的位置 宽与高设置为0即可 该广告视图默认是横竖屏自适应 但需要在旋转时调用orientationChanged 方法
     // Set the frame of advertisement view
@@ -85,7 +88,8 @@
     ////////////////////////////////////////////////////////////////////////////////////////////////
     // 检查评价提醒，此处使用的是测试ID，请登陆多盟官网（www.domob.cn）获取新的ID
     // Check for rate please get your own ID from Domob website
-    DMTools *_dmTools = [[DMTools alloc] initWithPublisherId:@"56OJyGFYuMOI695Q87"];
+#warning please change the DMPUBLISHERID
+    DMTools *_dmTools = [[DMTools alloc] initWithPublisherId:DMPUBLISHERID];
     [_dmTools checkRateInfo];
     [_dmTools release];
     

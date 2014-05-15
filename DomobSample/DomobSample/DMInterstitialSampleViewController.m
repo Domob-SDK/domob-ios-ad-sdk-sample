@@ -7,6 +7,9 @@
 
 #import "DMInterstitialSampleViewController.h"
 
+#define DMPUBLISHERID        @"56OJyM1ouMGoULfJaL"
+#define DMPLCAEMENTID_INTER @"16TLwebvAchkAY6iOWkE6kpk"
+
 @interface DMInterstitialSampleViewController ()
 
 @end
@@ -40,8 +43,9 @@
     UIViewController *rootViewController = [UIApplication sharedApplication].keyWindow.rootViewController;
     //　初始化插屏广告，此处使用的是测试ID，请登陆多盟官网（www.domob.cn）获取新的ID
     // Get your own ID from Domob website
-    _dmInterstitial = [[DMInterstitialAdController alloc] initWithPublisherId:@"56OJyGFYuMOI695Q87"
-                                                                  placementId:@"16TLwMxaAc0izY7NJoP2Ihfz"
+#warning please change the DMPUBLISHERID and the DMPLCAEMENTID_INTER
+    _dmInterstitial = [[DMInterstitialAdController alloc] initWithPublisherId:DMPUBLISHERID
+                                                                  placementId:DMPLCAEMENTID_INTER
                                                            rootViewController:rootViewController
                                                                          size:adSize];
     _dmInterstitial.delegate = self;

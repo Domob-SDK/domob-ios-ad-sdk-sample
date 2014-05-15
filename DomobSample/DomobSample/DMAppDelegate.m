@@ -10,6 +10,9 @@
 #import "DMInterstitialSampleViewController.h"
 #import "DMFeedsAdViewController.h"
 
+#define DMPUBLISHERID        @"56OJyM1ouMGoULfJaL"
+#define DMPLCAEMENTID_SPLASH @"16TLwebvAchkAY6iOVhpfHPs"
+
 @implementation DMAppDelegate
 
 - (void)dealloc
@@ -75,8 +78,9 @@
     // Choose NO or YES for RealTimeSplashView or SplashView
     // 初始化开屏广告控制器，此处使用的是测试ID，请登陆多盟官网（www.domob.cn）获取新的ID
     // Get your ID from Domob website
-    NSString* testPubID = @"56OJyGFYuMOI695Q87";
-    NSString* testSplashPlacementID = @"16TLuy4aAp-v1NUf4eTstZfk";
+#warning please change the DMPUBLISHERID and the DMPLCAEMENTID_SPLASH
+    NSString* testPubID = DMPUBLISHERID;
+    NSString* testSplashPlacementID = DMPLCAEMENTID_SPLASH;
     UIColor* bgColor = [UIColor colorWithPatternImage:[UIImage imageNamed:defaultImgName]];
     if (isCacheSplash) {
         _splashAd = [[DMSplashAdController alloc] initWithPublisherId:testPubID
