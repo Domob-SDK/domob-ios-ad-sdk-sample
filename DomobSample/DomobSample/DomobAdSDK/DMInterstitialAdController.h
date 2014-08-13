@@ -24,11 +24,6 @@
               placementId:(NSString *)placementId                   // Domob PlacementId
        rootViewController:(UIViewController *)rootViewController;   // set RootViewController
 
-//  init an Interstitial ad viewController
-- (id)initWithPublisherId:(NSString *)publisherId                   // Domob PublisherId
-              placementId:(NSString *)placementId                   // Domob PlacementId
-       rootViewController:(UIViewController *)rootViewController    // set RootViewController
-                     size:(CGSize)adSize;                           // size for interstitial ad view
 
 // load ad
 - (void)loadAd;

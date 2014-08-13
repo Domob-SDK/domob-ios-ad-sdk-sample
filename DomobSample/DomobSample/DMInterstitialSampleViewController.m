@@ -46,8 +46,7 @@
 #warning please change the DMPUBLISHERID and the DMPLCAEMENTID_INTER
     _dmInterstitial = [[DMInterstitialAdController alloc] initWithPublisherId:DMPUBLISHERID
                                                                   placementId:DMPLCAEMENTID_INTER
-                                                           rootViewController:rootViewController
-                                                                         size:adSize];
+                                                           rootViewController:rootViewController];
     _dmInterstitial.delegate = self;
     // load advertisement
     [_dmInterstitial loadAd];
