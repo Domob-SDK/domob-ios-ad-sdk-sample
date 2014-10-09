@@ -40,7 +40,7 @@
         adSize = DOMOB_AD_SIZE_600x500;
     }
     
-    UIViewController *rootViewController = [UIApplication sharedApplication].keyWindow.rootViewController;
+    UIViewController *rootViewController = [[[UIApplication sharedApplication] delegate] window].rootViewController;
     //　初始化插屏广告，此处使用的是测试ID，请登陆多盟官网（www.domob.cn）获取新的ID
     // Get your own ID from Domob website
 #warning please change the DMPUBLISHERID and the DMPLCAEMENTID_INTER
