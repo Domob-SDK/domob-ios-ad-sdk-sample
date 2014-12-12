@@ -63,6 +63,8 @@
 - (void)dmInterstitialWillPresentScreen:(DMInterstitialAdController *)dmInterstitial;
 // Sent just after dismissing an interstitial
 - (void)dmInterstitialDidDismissScreen:(DMInterstitialAdController *)dmInterstitial;
+// Sent just fail to present an interstitial because of error orientation
+- (void)dmInterstitialFailToPresentScreenForErrorOrientation:(DMInterstitialAdController *)dmInterstitial;
 
 // Sent just before presenting the user a modal view
 - (void)dmInterstitialWillPresentModalView:(DMInterstitialAdController *)dmInterstitial;
