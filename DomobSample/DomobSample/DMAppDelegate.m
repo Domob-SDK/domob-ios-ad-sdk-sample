@@ -8,7 +8,6 @@
 #import "DMAppDelegate.h"
 #import "DMInlineSampleViewController.h"
 #import "DMInterstitialSampleViewController.h"
-#import "DMFeedsAdViewController.h"
 
 #define DMPUBLISHERID        @"56OJyM1ouMGoULfJaL"
 #define DMPLCAEMENTID_SPLASH @"16TLwebvAchkAY6iOVhpfHPs"
@@ -27,8 +26,7 @@
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
     self.tabBarController = [[[UITabBarController alloc] init] autorelease];
-    self.tabBarController.delegate = self;
-    UIViewController *viewController1, *viewController2,*viewController3;
+    UIViewController *viewController1, *viewController2;
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
         viewController1 = [[[DMInlineSampleViewController alloc]
                             initWithNibName:@"DMInlineSampleViewController_iPhone"
@@ -36,11 +34,8 @@
         viewController2 = [[[DMInterstitialSampleViewController alloc]
                             initWithNibName:@"DMInterstitialSampleViewController_iPhone"
                             bundle:nil] autorelease];
-        viewController3 = [[[DMFeedsAdViewController alloc]
-                            initWithNibName:@"DMFeedsAdViewController"
-                            bundle:nil] autorelease];
         
-        self.tabBarController.viewControllers = @[viewController1, viewController2,viewController3];
+        self.tabBarController.viewControllers = @[viewController1, viewController2];
     } else {
         viewController1 = [[[DMInlineSampleViewController alloc]
                             initWithNibName:@"DMInlineSampleViewController_iPad"
@@ -92,7 +87,7 @@
         if (_splashAd.isReady)
         {
             [_splashAd present];
-           // [_splashAd alphaToTop];
+    
         }
         [_splashAd release];
     } else {
@@ -149,25 +144,6 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
-
- // Optional UITabBarControllerDelegate method.
- - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
- {
-     if (![viewController isKindOfClass:[DMFeedsAdViewController class]]) {
-         
-         [[NSNotificationCenter defaultCenter] postNotification:
-          [NSNotification notificationWithName:@"closeFeedsAdView" object:self]];
-     }
-
- }
-
-
-/*
- // Optional UITabBarControllerDelegate method.
- - (void)tabBarController:(UITabBarController *)tabBarController didEndCustomizingViewControllers:(NSArray *)viewControllers changed:(BOOL)changed
- {
- }
- */
 
 #pragma mark -
 #pragma makr Domob Splash Ad Delegate

@@ -41,15 +41,12 @@
 		1DF6E0AA162413140069BE3B /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DF6E0A9162413140069BE3B /* Icon@2x.png */; };
 		E515CFCC177D8EF700CF4F99 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E515CFCB177D8EF700CF4F99 /* AudioToolbox.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		E52599C81907C1FD00999545 /* libDomobAdSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E52599C71907C1FD00999545 /* libDomobAdSDK.a */; };
-		E52BE785180E365000A3131B /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = E52BE784180E365000A3131B /* EGORefreshTableHeaderView.m */; };
-		E52BE789180E369D00A3131B /* DMFeedsAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E52BE787180E369D00A3131B /* DMFeedsAdViewController.m */; };
 		E567E01317F5857B00446E72 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E567E01217F5857B00446E72 /* CoreText.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		E567E01517F5858700446E72 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E567E01417F5858700446E72 /* QuartzCore.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		E567E01717F5859000446E72 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E567E01617F5859000446E72 /* MediaPlayer.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		E567E01917F5859B00446E72 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E567E01817F5859B00446E72 /* CoreMedia.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		E567E01B17F585A700446E72 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E567E01A17F585A700446E72 /* libz.dylib */; settings = {ATTRIBUTES = (Weak, ); }; };
 		E59A463418434F7300CAD3D1 /* DomobAdSDKBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E59A463218434F7300CAD3D1 /* DomobAdSDKBundle.bundle */; };
-		E5F80E7F18152E1F00168C05 /* DMFeedsAdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5F80E7E18152E1F00168C05 /* DMFeedsAdViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -97,10 +94,6 @@
 		E52599C71907C1FD00999545 /* libDomobAdSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libDomobAdSDK.a; sourceTree = "<group>"; };
 		E526830518ADF13D0045FDF7 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		E526830718ADF1460045FDF7 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
-		E52BE783180E365000A3131B /* EGORefreshTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGORefreshTableHeaderView.h; sourceTree = "<group>"; };
-		E52BE784180E365000A3131B /* EGORefreshTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGORefreshTableHeaderView.m; sourceTree = "<group>"; };
-		E52BE786180E369D00A3131B /* DMFeedsAdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMFeedsAdViewController.h; sourceTree = "<group>"; };
-		E52BE787180E369D00A3131B /* DMFeedsAdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMFeedsAdViewController.m; sourceTree = "<group>"; };
 		E567E01217F5857B00446E72 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		E567E01417F5858700446E72 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		E567E01617F5859000446E72 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
@@ -110,13 +103,11 @@
 		E567E01E17F585BB00446E72 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		E56D172C18BF450000C1637C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		E59A462B18434F7300CAD3D1 /* DMAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMAdView.h; sourceTree = "<group>"; };
-		E59A462C18434F7300CAD3D1 /* DMFeedsAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMFeedsAdView.h; sourceTree = "<group>"; };
 		E59A462D18434F7300CAD3D1 /* DMInterstitialAdController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMInterstitialAdController.h; sourceTree = "<group>"; };
 		E59A462E18434F7300CAD3D1 /* DMRTSplashAdController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMRTSplashAdController.h; sourceTree = "<group>"; };
 		E59A462F18434F7300CAD3D1 /* DMSplashAdController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMSplashAdController.h; sourceTree = "<group>"; };
 		E59A463018434F7300CAD3D1 /* DMTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMTools.h; sourceTree = "<group>"; };
 		E59A463218434F7300CAD3D1 /* DomobAdSDKBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DomobAdSDKBundle.bundle; sourceTree = "<group>"; };
-		E5F80E7E18152E1F00168C05 /* DMFeedsAdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DMFeedsAdViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,8 +210,6 @@
 				1D08E85A1622DDDD004FC1AC /* DMInlineSampleViewController.m */,
 				1D08E8601622DDDD004FC1AC /* DMInterstitialSampleViewController.h */,
 				1D08E8611622DDDD004FC1AC /* DMInterstitialSampleViewController.m */,
-				E52BE786180E369D00A3131B /* DMFeedsAdViewController.h */,
-				E52BE787180E369D00A3131B /* DMFeedsAdViewController.m */,
 				1D08E8781622DFE9004FC1AC /* Resources */,
 				1D08E8481622DDDD004FC1AC /* Supporting Files */,
 			);
@@ -230,8 +219,6 @@
 		1D08E8481622DDDD004FC1AC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				E52BE783180E365000A3131B /* EGORefreshTableHeaderView.h */,
-				E52BE784180E365000A3131B /* EGORefreshTableHeaderView.m */,
 				1D08E8491622DDDD004FC1AC /* DomobSample-Info.plist */,
 				1D08E84A1622DDDD004FC1AC /* InfoPlist.strings */,
 				1D08E84D1622DDDD004FC1AC /* main.m */,
@@ -253,7 +240,6 @@
 				1D08E86A1622DDDD004FC1AC /* DMInlineSampleViewController_iPad.xib */,
 				1D8D224C162405DA00F037AA /* DMInterstitialSampleViewController_iPhone.xib */,
 				1D08E8701622DDDD004FC1AC /* DMInterstitialSampleViewController_iPad.xib */,
-				E5F80E7E18152E1F00168C05 /* DMFeedsAdViewController.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -263,7 +249,6 @@
 			children = (
 				E52599C71907C1FD00999545 /* libDomobAdSDK.a */,
 				E59A462B18434F7300CAD3D1 /* DMAdView.h */,
-				E59A462C18434F7300CAD3D1 /* DMFeedsAdView.h */,
 				E59A462D18434F7300CAD3D1 /* DMInterstitialAdController.h */,
 				E59A462E18434F7300CAD3D1 /* DMRTSplashAdController.h */,
 				E59A462F18434F7300CAD3D1 /* DMSplashAdController.h */,
@@ -357,7 +342,6 @@
 				1D031E3117326772006948D9 /* Default-Landscape~ipad.png in Resources */,
 				1D031E3217326788006948D9 /* Default.png in Resources */,
 				1D031E331732678B006948D9 /* Default@2x.png in Resources */,
-				E5F80E7F18152E1F00168C05 /* DMFeedsAdViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,10 +354,8 @@
 			files = (
 				1D08E84E1622DDDD004FC1AC /* main.m in Sources */,
 				1D08E8521622DDDD004FC1AC /* DMAppDelegate.m in Sources */,
-				E52BE789180E369D00A3131B /* DMFeedsAdViewController.m in Sources */,
 				1D08E85B1622DDDD004FC1AC /* DMInlineSampleViewController.m in Sources */,
 				1D08E8621622DDDD004FC1AC /* DMInterstitialSampleViewController.m in Sources */,
-				E52BE785180E365000A3131B /* EGORefreshTableHeaderView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,7 +475,7 @@
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "25590ba4-56a2-4981-8ce2-71f8de406fb9";
 				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;
 			};
@@ -519,7 +501,7 @@
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "25590ba4-56a2-4981-8ce2-71f8de406fb9";
 				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;
 			};
